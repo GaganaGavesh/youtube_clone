@@ -23,7 +23,10 @@ function Feed() {
           px: { sx: 0, md: 2 },
         }}
       >
-        <Sidebar setSelectedCategory={setSelectedCategory} />
+        <Sidebar
+          setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
         <Typography
           className="copyright"
           variant="body2"
