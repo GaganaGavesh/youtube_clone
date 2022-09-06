@@ -4,7 +4,6 @@ import { Stack } from "@mui/material";
 import { categories } from "../utils/constants";
 
 const Sidebar = (props) => {
-  const selectedCategory = "New";
   return (
     <Stack
       direction="row"
@@ -18,7 +17,7 @@ const Sidebar = (props) => {
         <button
           className="category-btn"
           style={{
-            background: category.name === selectedCategory && "#FC1503",
+            background: category.name === props.selectedCategory && "#FC1503",
             color: "#FFF",
           }}
           key={category.name}
@@ -26,7 +25,7 @@ const Sidebar = (props) => {
         >
           <span
             style={{
-              color: category.name === selectedCategory ? "white" : "red",
+              color: category.name === props.selectedCategory ? "white" : "red",
               marginRight: "15px",
             }}
           >
